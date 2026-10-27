@@ -1,0 +1,705 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashville</title>
+
+  <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="css/datepicker.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body class="antialiased dark:bg-zinc-950">
+
+  <div id="sidebar" class="fixed top-0 left-0 w-62 h-screen z-10 overflow-hidden bg-slate-50 dark:bg-zinc-900/30 aria-hidden:-left-62 z-20" aria-hidden="true">
+    <div class="h-16 flex items-center gap-1 px-4">
+      <i data-lucide="blocks" class="w-4.5 h-4.5 text-blue-700"></i>
+      <a href="../" class="block leading-none text-xl text-slate-950 dark:text-white font-bold tracking-tight">dashville</a>
+    </div>
+    <div class="py-4.5 px-3">
+      <ul class="flex flex-col gap-4 text-slate-700 dark:text-zinc-500">
+        <li data-role="menu-group" class="flex flex-col gap-px">
+          <div class="flex gap-0.5">
+            <a data-role="menu-link" href="" class="flex-1 flex items-center h-7 px-1 gap-[3px] rounded-md text-slate-950 dark:text-zinc-100 hover:bg-slate-200/50 dark:hover:bg-zinc-500/8">
+              <i data-lucide="chevron-right" class="w-3 h-3 rotate-90 opacity-60 dark:opacity-20"></i>
+              <span class="uppercase text-xs font-semibold dark:font-normal tracking-wider">Dashboard</span>
+            </a>
+            <!-- menu-toggle goes here if there is multi-level menu -->
+          </div>
+
+          <ul data-role="submenu" class="flex flex-col gap-px">
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="../dashboard/website-analytics.html" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-100 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                <div class="flex items-center gap-2.5 pl-3.5">
+                  <i data-lucide="chart-bar-stacked" class="w-4 h-4"></i>
+                  <span class="text-sm">Website Analytics</span>
+                </div>
+              </a>
+            </li>
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="../dashboard/financial-analysis.html" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-100 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                <div class="flex items-center gap-2.5 pl-3.5">
+                  <i data-lucide="chart-area" class="w-4 h-4"></i>
+                  <span class="text-sm">Financial Analysis</span>
+                </div>
+              </a>
+            </li>
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="../dashboard/programs-events.html" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-100 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                <div class="flex items-center gap-2.5 pl-3.5">
+                  <i data-lucide="calendar-range" class="w-4 h-4"></i>
+                  <span class="text-sm">Programs &amp; Events</span>
+                </div>
+              </a>
+            </li>
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="../dashboard/file-data-storage.html" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-100 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                <div class="flex items-center gap-2.5 pl-3.5">
+                  <i data-lucide="hard-drive" class="w-4 h-4"></i>
+                  <span class="text-sm">File &amp; Data Storage</span>
+                </div>
+              </a>
+            </li>
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="../dashboard/product-performance.html" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-100 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                <div class="flex items-center gap-2.5 pl-3.5">
+                  <i data-lucide="package-open" class="w-4 h-4"></i>
+                  <span class="text-sm">Product Performance</span>
+                </div>
+              </a>
+            </li>
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="../dashboard/customer-service.html" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-100 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                <div class="flex items-center gap-2.5 pl-3.5">
+                  <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+                  <span class="text-sm">Customer Service</span>
+                </div>
+              </a>
+            </li>
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="../dashboard/sales-revenue.html" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-100 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                <div class="flex items-center gap-2.5 pl-3.5">
+                  <i data-lucide="wallet" class="w-4 h-4"></i>
+                  <span class="text-sm">Sales &amp; Revenue</span>
+                </div>
+              </a>
+            </li>
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="../dashboard/cryptocurrency.html" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-100 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                <div class="flex items-center gap-2.5 pl-3.5">
+                  <i data-lucide="circle-dollar-sign" class="w-4 h-4"></i>
+                  <span class="text-sm">Cryptocurrency</span>
+                </div>
+              </a>
+            </li>
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="../dashboard/health-care.html" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-100 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                <div class="flex items-center gap-2.5 pl-3.5">
+                  <i data-lucide="hospital" class="w-4 h-4"></i>
+                  <span class="text-sm">Health Care</span>
+                </div>
+              </a>
+            </li>
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="../dashboard/real-estate.html" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-100 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                <div class="flex items-center gap-2.5 pl-3.5">
+                  <i data-lucide="building-2" class="w-4 h-4"></i>
+                  <span class="text-sm">Real Estate</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li data-role="menu-divider" class="border-t border-slate-200/60 dark:border-zinc-800/40 my-1.5"></li>
+        <li data-role="menu-group" class="flex flex-col gap-px">
+          <div class="flex gap-0.5">
+            <a data-role="menu-link" href="" class="flex-1 flex items-center h-7 px-1 gap-[3px] rounded-md text-slate-950 dark:text-zinc-100 hover:bg-slate-200/50 dark:hover:bg-zinc-800/40">
+              <i data-lucide="chevron-right" class="w-3 h-3 rotate-90 opacity-60 dark:opacity-20"></i>
+              <span class="uppercase text-xs font-semibold dark:font-normal tracking-wider">Applications</span>
+            </a>
+            <a data-role="menu-toggle" aria-expanded="false" href="" class="w-7 h-7 flex items-center justify-center rounded-md opacity-60 hover:opacity-100 hover:bg-slate-200/50 dark:text-slate-200 dark:hover:bg-zinc-800/40">
+              <i data-lucide="chevrons-up-down" class="w-3 h-3"></i>
+              <i data-lucide="chevrons-down-up" class="w-3 h-3 hidden"></i>
+            </a>
+          </div>
+
+          <ul data-role="submenu" class="flex flex-col gap-px">
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-pressed:bg-slate-200/80 dark:aria-pressed:bg-zinc-800/40 dark:aria-pressed:text-zinc-300 gap-0.5">
+                <i data-lucide="chevron-right" class="w-3 h-3 opacity-80 dark:opacity-60"></i>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="contact" class="w-4 h-4"></i>
+                  <span class="text-sm">Communication</span>
+                </div>
+              </a>
+
+              <nav class="flex flex-col gap-px mt-px hidden">
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="message-square-text" class="w-4 h-4"></i>
+                    <span class="text-sm">Chat</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    <span class="text-sm">Email</span>
+                  </div>
+                </a>
+              </nav>
+            </li>
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-pressed:bg-slate-200/80 dark:aria-pressed:bg-zinc-800/40 dark:aria-pressed:text-zinc-300 gap-0.5">
+                <i data-lucide="chevron-right" class="w-3 h-3 opacity-80 dark:opacity-60"></i>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="calendar-clock" class="w-4 h-4"></i>
+                  <span class="text-sm">Productivity</span>
+                </div>
+              </a>
+
+              <nav class="flex flex-col gap-px mt-px">
+                <a href="" aria-selected="true" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span class="text-sm">Calendar</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="contact" class="w-4 h-4"></i>
+                    <span class="text-sm">Contacts</span>
+                  </div>
+                </a>
+              </nav>
+            </li>
+          </ul>
+        </li>
+        <li data-role="menu-divider" class="border-t border-slate-200/60 dark:border-zinc-800/40 my-1.5"></li>
+        <li data-role="menu-group" class="flex flex-col gap-px">
+          <div class="flex gap-0.5">
+            <a data-role="menu-link" href="" class="flex-1 flex items-center h-7 px-1 gap-[3px] rounded-md text-slate-950 dark:text-zinc-100 hover:bg-slate-200/50 dark:hover:bg-zinc-800/40">
+              <i data-lucide="chevron-right" class="w-3 h-3 rotate-90 opacity-60 dark:opacity-20"></i>
+              <span class="uppercase text-xs font-semibold dark:font-normal tracking-wider">UI Blocks</span>
+            </a>
+            <a data-role="menu-toggle" aria-expanded="false" href="" class="w-7 h-7 flex items-center justify-center rounded-md opacity-60 hover:opacity-100 hover:bg-slate-200/50 dark:text-slate-200 dark:hover:bg-zinc-800/40">
+              <i data-lucide="chevrons-up-down" class="w-3 h-3"></i>
+              <i data-lucide="chevrons-down-up" class="w-3 h-3 hidden"></i>
+            </a>
+          </div>
+
+          <ul data-role="submenu" class="flex flex-col gap-px">
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-pressed:bg-slate-200/80 dark:aria-pressed:bg-zinc-800/40 dark:aria-pressed:text-zinc-300 gap-0.5">
+                <i data-lucide="chevron-right" class="w-3 h-3 opacity-80 dark:opacity-60"></i>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="package" class="w-4 h-4"></i>
+                  <span class="text-sm">Web Applications</span>
+                </div>
+              </a>
+
+              <nav class="flex flex-col gap-px mt-px hidden">
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="square-pen" class="w-4 h-4"></i>
+                    <span class="text-sm">Form Layouts</span>
+                  </div>
+                </a>
+              </nav>
+            </li>
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-pressed:bg-slate-200/80 dark:aria-pressed:bg-zinc-800/40 dark:aria-pressed:text-zinc-300 gap-0.5">
+                <i data-lucide="chevron-right" class="w-3 h-3 opacity-80 dark:opacity-60"></i>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="store" class="w-4 h-4"></i>
+                  <span class="text-sm">E-Commerce</span>
+                </div>
+              </a>
+
+              <nav class="flex flex-col gap-px mt-px hidden">
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                    <span class="text-sm">Checkout Forms</span>
+                  </div>
+                </a>
+              </nav>
+            </li>
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-pressed:bg-slate-200/80 dark:aria-pressed:bg-zinc-800/40 dark:aria-pressed:text-zinc-300 gap-0.5">
+                <i data-lucide="chevron-right" class="w-3 h-3 opacity-80 dark:opacity-60"></i>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="earth" class="w-4 h-4"></i>
+                  <span class="text-sm">Marketing</span>
+                </div>
+              </a>
+
+              <nav class="flex flex-col gap-px mt-px hidden">
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="wallet" class="w-4 h-4"></i>
+                    <span class="text-sm">Pricing Section</span>
+                  </div>
+                </a>
+              </nav>
+            </li>
+          </ul>
+        </li>
+        <li data-role="menu-divider" class="border-t border-slate-200/60 dark:border-zinc-800/40 my-1.5"></li>
+        <li data-role="menu-group" class="flex flex-col gap-px">
+          <div class="flex gap-0.5">
+            <a data-role="menu-link" href="" class="flex-1 flex items-center h-7 px-1 gap-[3px] rounded-md text-slate-950 dark:text-zinc-100 hover:bg-slate-200/50 dark:hover:bg-zinc-800/40">
+              <i data-lucide="chevron-right" class="w-3 h-3 rotate-90 opacity-60 dark:opacity-20"></i>
+              <span class="uppercase text-xs font-semibold dark:font-normal tracking-wider">Components</span>
+            </a>
+            <a data-role="menu-toggle" aria-expanded="false" href="" class="w-7 h-7 flex items-center justify-center rounded-md opacity-60 hover:opacity-100 hover:bg-slate-200/50 dark:text-slate-200 dark:hover:bg-zinc-800/40">
+              <i data-lucide="chevrons-up-down" class="w-3 h-3"></i>
+              <i data-lucide="chevrons-down-up" class="w-3 h-3 hidden"></i>
+            </a>
+          </div>
+
+          <ul data-role="submenu" class="flex flex-col gap-px">
+            <li data-role="submenu-item">
+              <a data-role="submenu-link" href="" class="flex items-center h-sbn px-1 rounded-md hover:text-slate-900 hover:bg-slate-200/50 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/40 aria-pressed:bg-slate-200/80 dark:aria-pressed:bg-zinc-800/40 dark:aria-pressed:text-zinc-300 gap-0.5">
+                <i data-lucide="chevron-right" class="w-3 h-3 opacity-80 dark:opacity-60"></i>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="package-2" class="w-4 h-4"></i>
+                  <span class="text-sm">Basic Elements</span>
+                </div>
+              </a>
+
+              <nav class="flex flex-col gap-px mt-px hidden">
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Accordion</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Alerts</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Badge</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Breadcrumbs</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Buttons</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Cards</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Collapse</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Dropdown</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Images</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">List Group</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Markers</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Modals</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Nav &amp; Tabs</span>
+                  </div>
+                </a>
+                <a href="" class="flex items-center h-sbn pl-11 rounded-md hover:text-slate-900 hover:bg-slate-200/50 aria-selected:bg-blue-100/60 aria-selected:text-blue-700 aria-selected:font-medium dark:hover:text-slate-300 dark:hover:bg-zinc-800/40 dark:aria-selected:bg-zinc-800/50 dark:aria-selected:hover:text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 relative -left-px"></i>
+                    <span class="text-sm">Pagination</span>
+                  </div>
+                </a>
+              </nav>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <br><br><br>
+    </div>
+  </div>
+
+  <!-- header -->
+  <div id="header" class="fixed top-0 right-0 left-0 h-16 bg-white border-b border-slate-200/70 dark:border-zinc-900 dark:bg-zinc-900/60 z-10">
+    <div class="h-full flex items-center px-4 gap-2.5">
+      <a id="toggleMenu2" href="" class="w-8 h-8 flex items-center justify-center shrink-0 rounded-lg border border-slate-200 hover:border-slate-300 dark:border-zinc-700/70 dark:hover:bg-zinc-800/50 dark:hover:border-zinc-700">
+        <i data-lucide="menu" class="w-4 h-4 text-slate-600 stroke-[2.5px] dark:text-zinc-300"></i>
+      </a>
+
+      <div class="h-16 flex items-center gap-1 px-1">
+        <i data-lucide="blocks" class="w-4.5 h-4.5 text-blue-700"></i>
+        <a href="../" class="block leading-none text-xl text-slate-950 dark:text-white font-bold tracking-tight">dashville</a>
+      </div>
+
+      <div class="ml-auto"></div>
+
+      <a id="toggleDarkMode" href="" class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-200 hover:border-slate-300 dark:border-zinc-700/70 dark:hover:bg-zinc-800/50 dark:hover:border-zinc-700">
+        <i data-lucide="sun" class="w-4.5 h-4.5 text-slate-600 dark:text-zinc-300"></i>
+      </a>
+
+      <div data-panel="notifications" class="relative">
+        <a data-role="dropdown-link" href="" class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-200 hover:border-slate-300 dark:border-zinc-700/70 dark:hover:bg-zinc-800/50 dark:hover:border-zinc-700">
+          <i data-lucide="package-2" class="w-4.5 h-4.5 text-slate-600 dark:text-zinc-300"></i>
+        </a>
+        <div data-role="dropdown-menu" aria-hidden="true" class="absolute top-full right-0 w-90 pt-2.5 aria-hidden:invisible aria-hidden:opacity-0">
+          <div class="bg-white dark:bg-zinc-950 rounded-lg shadow-2xl/20 dark:shadow-none border border-slate-300/60 dark:border-0">
+            <div class="p-4 flex items-center">
+              <h5 class="font-semibold me-auto dark:text-zinc-200">Notifications</h5>
+              <a href="" class="w-6 h-6 flex items-center justify-center border border-slate-300 dark:border-zinc-700/70 hover:border-slate-400/70 dark:hover:border-zinc-700 hover:bg-slate-50 dark:hover:bg-zinc-900 text-slate-700 dark:text-zinc-500 rounded-md">
+                <i data-lucide="ellipsis" class="w-4 h-4"></i>
+              </a>
+            </div>
+
+            <nav class="relative px-4 flex items-center gap-4 text-xm me-auto before:absolute before:inset-x-0 before:bottom-0 before:border-b before:border-slate-200/60 dark:before:border-zinc-800/80">
+              <a href="" aria-selected="true" class="relative pb-2 flex items-center gap-1 text-slate-600 dark:text-zinc-500 hover:text-blue-700 aria-selected:text-blue-700 aria-selected:border-b aria-selected:border-blue-700">
+                <i data-lucide="book-marked" class="w-3.5 h-3.5"></i>
+                <span class="font-medium dark:font-normal">All Notifications</span>
+                <span class="text-slate-400 dark:text-zinc-600 font-light ml-2">36</span>
+              </a>
+              <a href="" class="relative pb-2 flex items-center gap-1 text-slate-600 dark:text-zinc-500 hover:text-slate-900 dark:hover:text-zinc-200 aria-selected:text-blue-700 aria-selected:border-b aria-selected:border-blue-700">
+                <i data-lucide="book-text" class="w-3.5 h-3.5"></i>
+                <span class="font-medium dark:font-normal">Unread</span>
+                <span class="text-slate-400 dark:text-zinc-600 font-light ml-2">10</span>
+              </a>
+            </nav>
+
+            <div class="relative h-116 overflow-y-auto">
+              <ul class="text-xm text-slate-800 dark:text-zinc-400 p-2">
+                <li class="relative p-2 flex gap-2 rounded-md cursor-pointer hover:bg-slate-100 dark:hover:bg-zinc-900/60">
+                  <div data-role="avatar" class="w-10.5 h-10.5 rounded-full bg-slate-500 shrink-0">
+                    <img src="../img/user1.jpg" class="w-full h-full rounded-full object-cover" alt="">
+                  </div>
+                  <div class="flex-1 data-read:opacity-70">
+                    <p class="mb-1"><span class="font-medium text-slate-900 dark:text-zinc-200">Julius Lasco Pedros</span> mentioned you in a comment.</p>
+                    <span class="block text-xs text-slate-500 dark:text-zinc-600">2 weeks ago</span>
+                  </div>
+                  <div class="w-1.5 h-1.5 rounded-full bg-blue-700 mt-2"></div>
+                </li>
+                <li class="relative p-2 flex gap-2 rounded-md cursor-pointer hover:bg-slate-100 dark:hover:bg-zinc-900/60">
+                  <div data-role="avatar" class="w-10.5 h-10.5 rounded-full bg-slate-500 shrink-0">
+                    <span class="w-full h-full flex items-center justify-center rounded-full bg-cyan-600">
+                      <i data-lucide="layout-list" class="w-5 h-5 text-white"></i>
+                    </span>
+                  </div>
+                  <div class="flex-1 data-read:opacity-70">
+                    <p class="mb-1">New listings were added that match your search alert <span class="font-medium text-slate-900 dark:text-zinc-200">house for rent</span></p>
+                    <span class="block text-xs text-slate-500 dark:text-zinc-600">May 28, 2026</span>
+                  </div>
+                  <div class="w-1.5 h-1.5 rounded-full bg-blue-700 mt-2"></div>
+                </li>
+                <li class="relative p-2 flex gap-2 rounded-md cursor-pointer hover:bg-slate-100 dark:hover:bg-zinc-900/60">
+                  <div data-role="avatar" class="w-10.5 h-10.5 rounded-full bg-slate-500 shrink-0">
+                    <img src="../img/user2.jpg" class="w-full h-full rounded-full object-cover" alt="">
+                  </div>
+                  <div class="flex-1 data-read:opacity-70">
+                    <p class="mb-1">Reminder: <span class="font-medium text-slate-900 dark:text-zinc-200">Jerry Cuares</span> invited you to like <span class="font-medium text-slate-900 dark:text-zinc-200">Cuares Surveying Services</span></p>
+                    <span class="block text-xs text-slate-500 dark:text-zinc-600">May 15, 2026</span>
+
+                    <nav class="flex items-center gap-1.5 mt-2">
+                      <a href="" class="h-8 px-5 flex items-center bg-blue-700 hover:bg-blue-800 rounded-md font-medium text-white">Accept</a>
+                      <a href="" class="h-8 px-5 flex items-center border border-slate-200 hover:border-slate-300 dark:border-0 bg-white dark:bg-zinc-800 dark:hover:bg-zinc-700 rounded-md font-medium text-slate-900 dark:text-zinc-300">Decline</a>
+                    </nav>
+                  </div>
+                  <div class="w-1.5 h-1.5 rounded-full bg-blue-700 mt-2"></div>
+                </li>
+                <li class="relative p-2 flex gap-2 rounded-md cursor-pointer hover:bg-slate-100 dark:hover:bg-zinc-900/60">
+                  <div data-role="avatar" class="w-10.5 h-10.5 rounded-full bg-slate-500 shrink-0">
+                    <img src="../img/user3.jpg" class="w-full h-full rounded-full object-cover" alt="">
+                  </div>
+                  <div data-read class="flex-1 data-read:opacity-70">
+                    <p class="mb-1"><span class="font-medium text-slate-900 dark:text-zinc-200">Dyanne Rose Aceron</span> reacted to your post <span class="font-medium text-slate-900 dark:text-zinc-200">King of the Bed</span></p>
+                    <span class="block text-xs text-slate-500 dark:text-zinc-600">May 10, 2026</span>
+                  </div>
+                </li>
+                <li class="relative p-2 flex gap-2 rounded-md cursor-pointer hover:bg-slate-100 dark:hover:bg-zinc-900/60">
+                  <div data-role="avatar" class="w-10.5 h-10.5 rounded-full bg-slate-500 shrink-0">
+                    <img src="../img/user4.jpg" class="w-full h-full rounded-full object-cover" alt="">
+                  </div>
+                  <div data-read class="flex-1 data-read:opacity-70">
+                    <p class="mb-1"><span class="font-medium text-slate-900 dark:text-zinc-200">Angela Ighot</span> tagged you and <span class="font-medium text-slate-900 dark:text-zinc-200">9 others</span> in a post</p>
+                    <span class="block text-xs text-slate-500 dark:text-zinc-600">May 08, 2026</span>
+                  </div>
+                </li>
+                <li class="relative p-2 flex gap-2 rounded-md cursor-pointer hover:bg-slate-100 dark:hover:bg-zinc-900/60">
+                  <div data-role="avatar" class="w-10.5 h-10.5 rounded-full bg-slate-500 shrink-0">
+                    <span class="w-full h-full flex items-center justify-center rounded-full bg-slate-700">
+                      <i data-lucide="users" class="w-5.5 h-5.5 text-slate-300"></i>
+                    </span>
+                  </div>
+                  <div class="flex-1 data-read:opacity-70">
+                    <p class="mb-1">Your group <span class="font-medium text-slate-900 dark:text-zinc-200">Masterbaitor</span> added new fishing tournament event</p>
+                    <span class="block text-xs text-slate-500 dark:text-zinc-600">Feb 28, 2026</span>
+                  </div>
+                  <div class="w-1.5 h-1.5 rounded-full bg-blue-700 mt-2"></div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="px-4 pb-4 pt-3.5 flex justify-center border-t border-slate-200/60 dark:border-zinc-800/80">
+              <a href="" class="flex items-center gap-1 rounded-md text-slate-700 dark:text-zinc-400 hover:text-blue-700 dark:hover:text-zinc-200 leading-none">
+                <span class="font-medium dark:font-normal text-xm">Show previous notifications</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-panel="profile-menu" class="relative">
+        <a data-role="dropdown-link" href="" class="flex items-center gap-2">
+          <div class="block w-8 h-8 rounded-full">
+            <img src="../img/img.png" class="w-full h-full object-cover rounded-full" alt="" />
+          </div>
+        </a>
+        <div id="userLoggedDropdown" data-role="dropdown-menu" aria-hidden="true" class="absolute top-full right-0 w-58 pt-2.5 aria-hidden:invisible aria-hidden:opacity-0">
+            <div class="bg-white dark:bg-zinc-950 py-2 rounded-lg shadow-2xl/20 dark:shadow-none border border-slate-300/60 dark:border-0">
+              <div id="menuProfile" data-role="profile-menu" class="relative">
+                <div class="px-4 py-2">
+                  <div class="w-14 h-14 rounded-full mb-2.5">
+                    <img src="../img/img.png" alt="" class="rounded-full">
+                  </div>
+                  <h5 class="font-semibold dark:font-medium dark:text-zinc-200 mb-0.5">Sebastian Kavkaz</h5>
+                  <p class="text-xm text-slate-500 dark:text-zinc-600">Premium Member</p>
+                </div>
+
+                <hr class="border-slate-200/60 dark:border-zinc-800/40 m-3">
+
+                <nav class="flex flex-col gap-px text-sm px-2">
+                  <a href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="user-round-cog" class="w-4 h-4"></i> Edit Profile
+                  </a>
+                  <a href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="circle-user" class="w-4 h-4"></i> View Profile
+                  </a>
+                </nav>
+
+                <hr class="border-slate-200/60 dark:border-zinc-800/40 m-3">
+
+                <nav class="flex flex-col gap-px text-sm px-2">
+                  <a data-role="profile-link" data-target="menuHelpSupport" href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="life-buoy" class="w-4 h-4"></i>
+                    <span class="me-auto">Help &amp; Support</span>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                  </a>
+                  <a data-role="profile-link" data-target="menuPrivacy" href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="lock-keyhole" class="w-4 h-4"></i>
+                    <span class="me-auto">Privacy Settings</span>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                  </a>
+                  <a href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="settings" class="w-4 h-4"></i> Account Settings
+                  </a>
+                  <a href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="log-out" class="w-4 h-4"></i> Log Out
+                  </a>
+                </nav>
+              </div>
+              <div id="menuHelpSupport" data-role="profile-menu" class="relative hidden">
+                <div class="flex items-center gap-2 px-4 pt-2">
+                  <a data-role="profile-link" data-target="menuProfile" href="" class="h-5 flex items-center justify-center rounded-md text-slate-500 dark:text-zinc-500 hover:text-slate-950 dark:hover:text-zinc-200">
+                    <i data-lucide="arrow-left" class="w-4.5 h-4.5"></i>
+                  </a>
+                  <h5 class="text-md font-semibold dark:font-medium dark:text-zinc-200">Help &amp; Support</h5>
+                </div>
+
+                <hr class="opacity-0 m-2">
+
+                <nav class="flex flex-col gap-px text-sm px-2">
+                  <a href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="circle-question-mark" class="w-4 h-4"></i> Help Center
+                  </a>
+                  <a href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="message-square-warning" class="w-4 h-4"></i> General Inquiry
+                  </a>
+                  <a href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="heart-handshake" class="w-4 h-4"></i> Protection Center
+                  </a>
+                  <a href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="bug" class="w-4 h-4"></i> Technical Issues
+                  </a>
+                </nav>
+              </div>
+              <div id="menuPrivacy" data-role="profile-menu" class="relative hidden">
+                <div class="flex items-center gap-2 px-4 pt-2">
+                  <a data-role="profile-link" data-target="menuProfile" href="" class="h-5 flex items-center justify-center rounded-md text-slate-500 dark:text-zinc-500 hover:text-slate-950 dark:hover:text-zinc-200">
+                    <i data-lucide="arrow-left" class="w-4.5 h-4.5"></i>
+                  </a>
+                  <h5 class="text-md font-semibold dark:font-medium dark:text-zinc-200">Privacy Settings</h5>
+                </div>
+
+                <hr class="opacity-0 m-2">
+
+                <nav class="flex flex-col gap-px text-sm px-2">
+                  <a href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="shield-cog-corner" class="w-4 h-4"></i> Settings
+                  </a>
+                  <a href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="shield-user" class="w-4 h-4"></i> Privacy Checkup
+                  </a>
+                  <a href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="shield-keyhole" class="w-4 h-4"></i> Privacy Center
+                  </a>
+                  <a href="" class="flex items-center px-2 py-1.5 gap-2.5 rounded-md text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-900/70">
+                    <i data-lucide="logs" class="w-4 h-4"></i> Activity Logs
+                  </a>
+                </nav>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header -->
+
+  <div id="mainContent" class="fixed top-16 left-0 bottom-0 right-0 translate-x-62 aria-expanded:translate-x-0" aria-expanded="true">
+    <div id="calendarSidebar" class="absolute top-0 left-0 bottom-0 w-74 border-r border-slate-200/60 dark:border-slate-900 overflow-hidden">
+      <div class="px-content-left relative pt-4 px-4 pb-6 border-b border-slate-200/60">
+        <div id="inlineCalendar"></div>
+      </div>
+      <div class="relative py-5 px-2 border-b border-slate-200/60">
+        <div class="flex items-center justify-between ps-2 pe-1.5 mb-6">
+          <h6 class="font-semibold tracking-tight leading-none text-md text-slate-950">Upcoming Events</h6>
+          <a href="" class="flex items-center gap-px text-slate-600 hover:text-slate-900">
+            <span class="block text-sm leading-none">See all</span>
+            <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+
+        <div class="flex flex-col rounded-md gap-3">
+          <div class="relative p-2">
+            <nav class="absolute top-1.5 right-1 flex items-center gap-0.5">
+              <a href="" class="w-3.5 h-3.5 flex items-center justify-center hover:text-blue-700">
+                <i data-lucide="square-arrow-out-up-right" class="w-3 h-3"></i>
+              </a>
+              <a href="" class="w-3.5 h-3.5 flex items-center justify-center hover:text-blue-700">
+                <i data-lucide="pencil" class="w-3 h-3"></i>
+              </a>
+              <a href="" class="w-3.5 h-3.5 flex items-center justify-center hover:text-blue-700">
+                <i data-lucide="trash-2" class="w-3 h-3"></i>
+              </a>
+            </nav>
+
+            <span class="block text-xs text-slate-600 font-medium tracking-tight leading-none mb-1">Sep 03 at 09AM – Sep 04 at 11AM</span>
+            <a href="" class="tracking-tight font-medium text-md text-slate-950 mb-2">The Developer Experience Summit</a>
+            <p class="text-xm text-slate-500 mb-4">2nd Flr, Image Adverse Bldg., 1089 Hernan Cortes St, Mandaue City, Philippines</p>
+
+            <div class="flex flex-col gap-1">
+              <div class="flex items-center gap-2">
+                <i data-lucide="users" class="w-3.5 h-3.5"></i>
+                <span class="text-xm">3 people responded</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="calendar-clock" class="w-3.5 h-3.5"></i>
+                <span class="text-xm"><span class="text-slate-600">Event by</span> <span class="text-slate-950 font-medium">Hydronet Consultants Inc.</span></span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                <span class="text-xm"><span class="text-slate-600">Duration:</span> <span class="text-slate-950 font-medium">1 day</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative py-5 px-4">
+        <h6 class="text-slate-950 font-semibold mb-6 text-md">My Calendar</h6>
+
+        <ul class="flex flex-col gap-2.5 pr-2.5 mb-1">
+          <li class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full border-3 border-blue-400"></span>
+            <a href="" class="text-sm text-slate-600 hover:text-slate-900">Calendar Events</a>
+            <span class="text-xm font-inter text-slate-400 ml-auto">4</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full border-3 border-pink-400"></span>
+            <a href="" class="text-sm text-slate-600 hover:text-slate-900">Birthday Events</a>
+            <span class="text-xm font-inter text-slate-400 ml-auto">2</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full border-3 border-green-500"></span>
+            <a href="" class="text-sm text-slate-600 hover:text-slate-900">Holiday Calendar</a>
+            <span class="text-xm font-inter text-slate-400 ml-auto">3</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full border-3 border-indigo-400"></span>
+            <a href="" class="text-sm text-slate-600 hover:text-slate-900">Discovered Events</a>
+            <span class="text-xm font-inter text-slate-400 ml-auto">5</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full border-3 border-orange-400"></span>
+            <a href="" class="text-sm text-slate-600 hover:text-slate-900">Other Events</a>
+            <span class="text-xm font-inter text-slate-400 ml-auto">2</span>
+          </li>
+        </ul>
+      </div>
+      <div class="relative py-5 px-4"></div>
+    </div>
+
+    <div class="absolute top-0 right-0 bottom-0 left-74 overflow-y-auto">
+      <div class="relative p-6">
+        <div id='fullCalendar'></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="backdrop" class="fixed inset-0 bg-slate-800/60 dark:bg-slate-950/75 aria-hidden:opacity-0 aria-hidden:invisible z-10" aria-hidden="true"></div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="scripts/perfect-scrollbar.min.js"></script>
+  <script type="module" src="scripts/fullcalendar.js"></script>
+  <script type="module" src="scripts/datepicker.js"></script>
+
+  <script src="scripts/scripts.js"></script>
+  <script>
+    const calendarSidebar = document.getElementById('calendarSidebar');
+    new PerfectScrollbar(calendarSidebar, {
+      suppressScrollX: true,
+      maxScrollbarLength: 0
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "pixelle",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vite": "^7.0.2"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "air-datepicker": "^3.6.0",
+    "apexcharts": "^6.6.1",
+    "fullcalendar": "^6.1.20",
+    "jsvectormap": "^1.7.0",
+    "lucide": "^0.562.0",
+    "perfect-scrollbar": "^1.5.6",
+    "remixicon": "^4.6.0",
+    "tailwindcss": "^4.1.11"
+  }
+}

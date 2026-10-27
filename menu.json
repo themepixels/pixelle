@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Dashboard",
+    "submenu": [
+      {
+        "name": "Website Analytics",
+        "icon": "chart-bar-stacked",
+        "link": "../dashboard/website-analytics.html"
+      },
+      {
+        "name": "Finance Monitoring",
+        "icon": "chart-area",
+        "link": "../dashboard/finance-monitoring.html"
+      }
+    ]
+  },
+  {
+    "name": "Applications",
+    "submenu": [
+      {
+        "name": "Communications",
+        "icon": "contact",
+        "link": "",
+        "subnav": [
+          {
+            "name": "Chat",
+            "icon": "messages-square",
+            "link": "apps/chat.html"
+          },{
+            "name": "Email",
+            "icon": "mails",
+            "link": "apps/email.html"
+          }
+        ]
+      },{
+        "name": "Productivity",
+        "icon": "calendar-clock",
+        "link": "",
+        "subnav": [
+          {
+            "name": "Calendar",
+            "icon": "calendar",
+            "link": "apps/calendar.html"
+          },{
+            "name": "Contacts",
+            "icon": "contact",
+            "link": "apps/contacts.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "UI Blocks",
+    "submenu": [
+      {
+        "name": "Web Applications",
+        "icon": "package",
+        "link": "",
+        "subnav": [
+          {
+            "name": "Form Layouts",
+            "icon": "square-pen",
+            "link": "blocks/forms.html"
+          }
+        ]
+      },{
+        "name": "E-Commerce",
+        "icon": "store",
+        "link": "",
+        "subnav": [
+          {
+            "name": "Checkout Forms",
+            "icon": "shopping-bag",
+            "link": "blocks/checkout.html"
+          }
+        ]
+      },{
+        "name": "Marketing",
+        "icon": "earth",
+        "link": "",
+        "subnav": [
+          {
+            "name": "Pricing Section",
+            "icon": "wallet",
+            "link": "blocks/pricing.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Components",
+    "submenu": [
+      {
+        "name": "Basic Elements",
+        "icon": "package-2",
+        "link": "",
+        "subnav": [
+          {
+            "name": "Accordion",
+            "icon": "minus",
+            "iconsize": "sm",
+            "link": "docs/accordion.html"
+          },
+          {
+            "name": "Alerts",
+            "icon": "minus",
+            "iconsize": "sm",
+            "link": "docs/alerts.html"
+          },
+          {
+            "name": "Badge",
+            "icon": "minus",
+            "iconsize": "sm",
+            "link": "docs/badge.html"
+          },
+          {
+            "name": "Breadcrumbs",
+            "icon": "minus",
+            "iconsize": "sm",
+            "link": "docs/breadcrumbs.html"
+          },
+          {
+            "name": "Buttons",
+            "icon": "minus",
+            "iconsize": "sm",
+            "link": "docs/buttons.html"
+          }
+        ]
+      }
+    ]
+  }
+]

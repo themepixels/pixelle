@@ -1,0 +1,117 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixelle</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body class="dark:bg-slate-950">
+
+  <div id="sidebar" class="fixed top-0 left-0 w-62 h-full overflow-y-auto bg-white transition-all border-r border-slate-200/80 dark:border-slate-900">
+    <div class="h-16 flex items-center px-5">
+      <a href="" class="flex items-center text-2xl font-semibold tracking-tighter leading-none">
+        <span class="text-blue-950 dark:text-blue-500">pix</span>
+        <span class="text-blue-600 dark:text-white">elle</span>
+      </a>
+    </div>
+    <div class="py-4.5 px-3">
+      <ul id="sidebarMenu" class="flex flex-col gap-4 text-slate-700"></ul>
+    </div>
+  </div>
+
+  <!-- header -->
+  <div id="header" class="fixed top-0 right-0 left-62 z-10 h-16 bg-white border-b border-slate-200/80 dark:border-slate-900 transition-all">
+    <div class="h-full flex items-center px-4 gap-2.5">
+      <a id="toggleMenu" href="" class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-300 hover:border-slate-400/70 hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900">
+        <i data-lucide="menu" class="w-4.5 h-4.5 text-slate-700 dark:text-slate-300 stroke-[2.5]"></i>
+      </a>
+
+      <div class="flex items-center gap-2 rounded-lg w-60 h-8 px-1.5 border border-slate-300 hover:border-slate-400/70">
+        <div>
+          <i data-lucide="search" class="w-4.5 h-4.5 text-slate-500 dark:text-slate-600 stroke-[2.2]"></i>
+        </div>
+        <input type="text" class="outline-none text-sm placeholder:text-slate-400/80 dark:placeholder:text-slate-500" placeholder="Search..." />
+      </div>
+
+      <div class="ml-auto"></div>
+
+      <a id="toggleDarkMode" href="" class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-300 hover:border-slate-400/70 dark:border-slate-800 dark:hover:bg-slate-900">
+        <i data-lucide="sun" class="w-4.5 h-4.5 text-slate-600 dark:text-slate-400"></i>
+      </a>
+
+      <div>
+        <a href="" class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-300 hover:border-slate-400/70 dark:border-slate-800 dark:hover:bg-slate-900">
+          <i data-lucide="inbox" class="w-4.5 h-4.5 text-slate-600 dark:text-slate-400"></i>
+        </a>
+      </div>
+
+      <div class="relative px-1.5">
+        <a data-role="dropdown-link" href="" class="flex items-center gap-2">
+          <div class="block w-8 h-8 rounded-full">
+            <img src="img/img.png" class="w-full h-full object-cover rounded-full" alt="" />
+          </div>
+        </a>
+        <div data-role="dropdown-menu" class="absolute top-full right-1 w-58 pt-2.5 invisible opacity-0 transition-all">
+            <div class="bg-white border border-slate-300/70 rounded-lg shadow-md shadow-slate-200/60">
+              <div class="px-4 pt-4 pb-1.5">
+                <div class="w-14 h-14 rounded-full mb-2.5">
+                  <img src="img/img.png" alt="" class="rounded-full">
+                </div>
+                <h5 class="text-md font-medium">Sebastian Kavkaz</h5>
+                <p class="text-xm text-slate-500">Premium Member</p>
+              </div>
+
+              <hr class="opacity-10 m-3">
+
+              <nav class="flex flex-col gap-px text-sm px-2">
+                <a href="" class="flex items-center px-2 py-1.5 gap-3 rounded-md text-slate-700 hover:bg-slate-100">
+                  <i data-lucide="user-round-cog" class="w-4 h-4"></i> Edit Profile
+                </a>
+                <a href="" class="flex items-center px-2 py-1.5 gap-3 rounded-md text-slate-700 hover:bg-slate-100">
+                  <i data-lucide="circle-user" class="w-4 h-4"></i> View Profile
+                </a>
+              </nav>
+
+              <hr class="opacity-10 m-3">
+
+              <nav class="flex flex-col gap-px text-sm px-2 mb-2">
+                <a href="" class="flex items-center px-2 py-1.5 gap-3 rounded-md text-slate-700 hover:bg-slate-100">
+                  <i data-lucide="life-buoy" class="w-4 h-4"></i> Help Center
+                </a>
+                <a href="" class="flex items-center px-2 py-1.5 gap-3 rounded-md text-slate-700 hover:bg-slate-100">
+                  <i data-lucide="lock-keyhole" class="w-4 h-4"></i> Privacy Settings
+                </a>
+                <a href="" class="flex items-center px-2 py-1.5 gap-3 rounded-md text-slate-700 hover:bg-slate-100">
+                  <i data-lucide="settings" class="w-4 h-4"></i> Account Settings
+                </a>
+                <a href="" class="flex items-center px-2 py-1.5 gap-3 rounded-md text-slate-700 hover:bg-slate-100">
+                  <i data-lucide="log-out" class="w-4 h-4"></i> Log Out
+                </a>
+              </nav>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header -->
+
+  <div id="mainContent" class="fixed top-16 right-0 bottom-0 left-62 transition-all overflow-y-auto">
+    <div class="p-6">///...///</div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="scripts/menu.js"></script>
+  <script src="scripts/scripts.js"></script>
+  <script>
+
+    loadMenu({
+      expandedSubMenu: ['Basic Elements'],
+      activePage: 'Accordion'
+    })
+  </script>
+</body>
+</html>
